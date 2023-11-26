@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EmDiaSUS</string>
+    <string name="title_activity_formulario_paciente">FormularioPacienteActivity</string>
+    <string name="nome_do_paciente">nome do paciente</string>
+    <string name="email">Email\n</string>
+    <string name="cpf">CPF</string>
+    <string name="save_button">Salvar</string>
+</resources>
