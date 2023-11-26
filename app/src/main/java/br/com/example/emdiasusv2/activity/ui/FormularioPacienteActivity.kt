@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import br.com.example.emdiasusv2.R
+import br.com.example.emdiasusv2.dao.PacienteDAO
 import br.com.example.emdiasusv2.model.Paciente
 
 class FormularioPacienteActivity : AppCompatActivity(R.layout.activity_formulario_paciente) {
@@ -32,6 +33,10 @@ class FormularioPacienteActivity : AppCompatActivity(R.layout.activity_formulari
             )
 
             Log.i("FormularioPaciente","onCreate:${pacienteNovo.toString()}")
+            val dao = PacienteDAO()
+            dao.adiciona(pacienteNovo)
+            Log.i("FormularioPaciente","onCreate:${dao.buscaTodos()}")
+            finish()
 
         }
 
