@@ -12,8 +12,10 @@ import br.com.example.emdiasusv2.model.Paciente
 
 class ListaPacientesAdapter (
     private val context: Context,
-    private val pacientes : List<Paciente>
+     pacientes : List<Paciente>
 ): RecyclerView.Adapter<ListaPacientesAdapter.ViewHolder>() {
+
+    private val pacientes = pacientes.toMutableList()
 
     class ViewHolder(view: View):RecyclerView.ViewHolder(view) {
         fun vincula(paciente: Paciente) {
@@ -42,4 +44,11 @@ class ListaPacientesAdapter (
     }
 
     override fun getItemCount(): Int = pacientes.size
+
+    fun atualiza(pacientes: List<Paciente>){
+        this.pacientes.clear()
+        this.pacientes.addAll(pacientes)
+        notifyDataSetChanged()
+    }
+
 }
