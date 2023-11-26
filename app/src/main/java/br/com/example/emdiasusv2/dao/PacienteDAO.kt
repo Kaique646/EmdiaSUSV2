@@ -4,6 +4,7 @@ import br.com.example.emdiasusv2.model.Paciente
 
 class PacienteDAO {
     fun adiciona(paciente: Paciente){
+        pacientes.add(paciente)
 
     }
     fun buscaTodos():List<Paciente>{
